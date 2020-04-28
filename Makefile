@@ -2,8 +2,8 @@
 develop:
 	poetry install
 
-.PHONY: dist
-dist: clean
+.PHONY: publish
+publish: clean
 	poetry build
 	poetry publish
 
