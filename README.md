@@ -4,14 +4,14 @@ A CLI for running [GoogleAds queries](https://developers.google.com/google-ads/a
 
 ## Usage
 ### Installing
-```pip install gaql```
 
-```pipx install gaql (recommended)```
+- `pip install gaql`
+- `pipx install gaql` (recommended)
 
 ### Querying
 The default mode. Runs either as a REPL, or as a one off command
 
-```
+```bash
 - gaql [ACCOUNT_ID] - run in REPL mode
 - gaql [ACCOUNT_ID] [WORDS*] - run a single query. Note depending on your shell you may need to quote some queries if you run like this.
 
@@ -22,7 +22,7 @@ flags:
 ```
 
 Examples, using 1-000-000-000 as our demo account id:
-```
+```bash
 # opens a REPL with json lines as the output format
 gaql -f jsonl 1-000-000-000
 
