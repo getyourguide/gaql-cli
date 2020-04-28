@@ -33,6 +33,8 @@ gaql -f jsonl 1-000-000 'SELECT campaign.id FROM campaign'
 gaql -o campaigns.jsonl 1-000-000 'SELECT campaign.id FROM campaign'
 ```
 
+**tip**: by default `LIMIT 100` will be added to your queries. To override this behaviour, simply define your own `LIMIT X`.
+
 **tip**: the autocomplete will return only valid fields for the selected entity if you fill out the `FROM <entity>` part
 first.
 
