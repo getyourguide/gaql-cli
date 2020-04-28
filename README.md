@@ -4,9 +4,9 @@ A CLI for sending [GoogleAds queries](https://developers.google.com/google-ads/a
 
 ## Usage
 ### Installing
-```pip install gaql-cli```
+```pip install gaql```
 
-```pipx install gaql-cli (recommended)```
+```pipx install gaql (recommended)```
 
 ### Querying
 The default mode. Runs either as a REPL, or as a one off command
@@ -37,7 +37,7 @@ gaql -o campaigns.jsonl 1-000-000 'SELECT campaign.id FROM campaign'
 first.
 
 ### Other tools
-Used for useful common queries. Currently only supports getting all accounts under an MCC, to help when managing multiple accounts.
+Used for useful common queries. Currently only supports getting all accounts under an MCC, to help when managing multiple accounts. The MCC is taken from the `login_customer_id` field.
 - `gaql-tools queries clients`
 
 ## Notes
