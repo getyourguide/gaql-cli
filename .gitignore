@@ -1,0 +1,16 @@
+.idea/
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# pyflow
+build/
+dist/
+__pypackages__/
+
+# Environments
+.env
+
+*.egg-info/
+*.swp
