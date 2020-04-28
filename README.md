@@ -1,6 +1,6 @@
 # GAQL CLI
 
-A CLI for sending [GoogleAds queries](https://developers.google.com/google-ads/api/docs/query/overview)
+A CLI for running [GoogleAds queries](https://developers.google.com/google-ads/api/docs/query/overview).
 
 ## Usage
 ### Installing
