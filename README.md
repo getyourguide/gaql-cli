@@ -62,3 +62,10 @@ make format  - run black over the code
 make lint    - lint and format the code
 ```
 
+## Security
+For sensitive security matters please contact security@getyourguide.com.
+
+## Legal
+gaql-cli is licensed under the Apache License, Version 2.0. See [LICENSE](LICENSE) for the full text.
+
+
