@@ -21,16 +21,16 @@ flags:
 -o|--output <file> specify an output file. Based on the extension, format is inferred. Non REPL usage only
 ```
 
-Examples, using 1-000-000 as our demo account id:
+Examples, using 1-000-000-000 as our demo account id:
 ```
 # opens a REPL with json lines as the output format
-gaql -f jsonl 1-000-000
+gaql -f jsonl 1-000-000-000
 
 # runs the query against the given account, outputting to the terminal the results as json lines
-gaql -f jsonl 1-000-000 'SELECT campaign.id FROM campaign'
+gaql -f jsonl 1-000-000-000 'SELECT campaign.id FROM campaign'
 
 # runs the query against the given account, outputting to 'campaigns.jsonl' the result as json lines
-gaql -o campaigns.jsonl 1-000-000 'SELECT campaign.id FROM campaign'
+gaql -o campaigns.jsonl 1-000-000-000 'SELECT campaign.id FROM campaign'
 ```
 
 **tip**: by default `LIMIT 100` will be added to your queries. To override this behaviour, simply define your own `LIMIT X`.
