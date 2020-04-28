@@ -13,7 +13,7 @@ The default mode. Runs either as a REPL, or as a one off command
 
 ```
 - gaql [ACCOUNT_ID] - run in REPL mode
-- gaql [ACCOUNT_ID] [WORDS*] - run a single query. Note dependening on your shell you may need to quote some queries if you run like this.
+- gaql [ACCOUNT_ID] [WORDS*] - run a single query. Note depending on your shell you may need to quote some queries if you run like this.
 
 flags:
 --help show the help message; basically the below
@@ -33,7 +33,7 @@ gaql -f jsonl 1-000-000-000 'SELECT campaign.id FROM campaign'
 gaql -o campaigns.jsonl 1-000-000-000 'SELECT campaign.id FROM campaign'
 ```
 
-**tip**: by default `LIMIT 100` will be added to your queries. To override this behaviour, simply define your own `LIMIT X`.
+**tip**: by default `LIMIT 100` will be added to your queries. To override this behavior, simply define your own `LIMIT X`.
 
 **tip**: the autocomplete will return only valid fields for the selected entity if you fill out the `FROM <entity>` part
 first.
@@ -69,5 +69,3 @@ For sensitive security matters please contact security@getyourguide.com.
 
 ## Legal
 gaql-cli is licensed under the Apache License, Version 2.0. See [LICENSE](LICENSE) for the full text.
-
-
