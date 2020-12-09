@@ -45,10 +45,10 @@ def read_credentials_from_file():
         sys.exit(1)
 
 
-
 def load_credentials():
     """Loads credentials with the following ordering: from env, Google's yaml file, a custom .json file in .config/gaql"""
     from google.ads.google_ads import config
+
     try:
         return config.load_from_env()
     except:
@@ -56,23 +56,11 @@ def load_credentials():
             return config.load_from_yaml_file()
         except:
             if not CREDENTIAL_FILE.exists():
-                print(f"Couldn't load credentials from the environment, or from ~/google-ads.yaml. Trying {CREDENTIAL_FILE}")
+                print(
+                    f"Couldn't load credentials from the environment, or from ~/google-ads.yaml. Trying {CREDENTIAL_FILE}"
+                )
             return config.load_from_dict(read_credentials_from_file())
 
 
 def get_root_client():
     return load_credentials()['login_customer_id']
-
-
-def setup_client():
-    from google.ads.google_ads.client import GoogleAdsClient
-    credentials = load_credentials()
-    return GoogleAdsClient.load_from_dict(credentials)
-
-
-def setup_ads_service(client):
-    return client.get_service('GoogleAdsService', version='v6')
-
-
-def setup_fields_service(client):
-    return client.get_service('GoogleAdsFieldService', version='v6')

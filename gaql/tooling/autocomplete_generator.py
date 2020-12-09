@@ -1,7 +1,7 @@
 """Script for maintaining autocompletions.py"""
 from gaql.lib.click_decorators.state import State
 from gaql.lib.google_clients.config import setup_client
-from gaql.lib.google_clients.queries import google_fields_query
+from gaql.lib.google_clients.query_client import google_fields_query
 from gaql.lib.output import to_dict
 import json
 import pathlib
@@ -10,8 +10,10 @@ import pathlib
 def attributes_query(resource):
     return f"SELECT name WHERE category='ATTRIBUTE' AND name LIKE '{resource}.%'"
 
+
 def resources_query():
     return f"SELECT name, selectable_with WHERE category = 'RESOURCE'"
+
 
 def autocomplete_fields():
     """Dumps entity fields from Google, building a single large JSON which provides the seed data for autocompletion"""
@@ -23,7 +25,7 @@ def autocomplete_fields():
 
     resources_path = pathlib.Path('gaql/lib/google_clients/completion/entities.json')
     resource_rows = query_method(resources_query())
-    resources = { resource.name: to_dict(resource) for resource in resource_rows }
+    resources = {resource.name: to_dict(resource) for resource in resource_rows}
     if resources_path.exists():
         with resources_path.open('r') as f:
             existing_resources = json.load(f)
@@ -42,6 +44,7 @@ def autocomplete_fields():
 
     with resources_path.open('w') as f:
         json.dump(resources, fp=f)
+
 
 def flatten_completion():
     """flattens all entities into a dictionary { name: fields }, with one aggregating entry { all: all_fields }"""
@@ -73,6 +76,7 @@ def flatten_completion():
     with output_path.open('w') as f:
         f.write("COMPLETIONS = ")
         json.dump(flattened_autocompletion, fp=f)
+
 
 if __name__ == "__main__":
     autocomplete_fields()

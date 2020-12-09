@@ -3,8 +3,7 @@ import sys
 
 import click
 
-from gaql import FORMATS
-
+from gaql.lib.formatter import OutputFormat
 
 class State(object):
     def __init__(self):
@@ -23,7 +22,7 @@ class State(object):
             click.echo('[FATAL]: if output is set, a query must be provided', sys.stderr)
             sys.exit(1)
 
-    def __coerce_format(self):
+    def __coerce_format(self) -> OutputFormat:
         """
         If a file format was provided, use that format, otherwise use the filename's format
         if it's a supported format. Otherwise, default to json
@@ -34,9 +33,9 @@ class State(object):
         filename = self.output.name
         if '.' in filename:
             ext = os.path.splitext(filename)[1][1:]
-            if ext in FORMATS:
-                return ext
-        return 'json'
+            if ext in OutputFormat:
+                return OutputFormat[ext]
+        return OutputFormat.JSON
 
 
 pass_state = click.make_pass_decorator(State, ensure=True)
@@ -62,13 +61,14 @@ def output_option(f):
 def format_option(f):
     def callback(ctx, param, value):
         state = ctx.ensure_object(State)
-        state.format = value
+        if value:
+            state.format = OutputFormat[value]
         return value
 
     return click.option(
         '-f',
         '--format',
-        type=click.Choice(['json', 'jsonl', 'csv', 'proto'], case_sensitive=False),
+        type=click.Choice([enum.name for enum in OutputFormat], case_sensitive=False),
         help='the format to output rows in (defaults to json)',
         expose_value=False,
         callback=callback,

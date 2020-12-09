@@ -5,11 +5,12 @@ from gaql.lib.google_clients.completion.autocompletions import COMPLETIONS
 from gaql.lib.google_clients.completion.trie import Trie
 
 
-class GoogleCompleter(Completer):
+class GoogleCompleter:
     """Provides autocompletion lookup got GoogleSearch fields
     TODO: the structure of words is grouped by a single entity prefix (e.g segment.x, campaign.y). We could probably
           split words up based on this structure instead of using a Trie.
     """
+
     _ALL = 'all'
     _FROM_REGEX = re.compile('FROM (\w+)')
 
@@ -26,6 +27,7 @@ class GoogleCompleter(Completer):
 
     def initialize_trie(self, entity):
         from gaql.lib.google_clients.completion.trie import Trie
+
         if entity in self.autocompletion:
             fields = self.autocompletion[entity]
             trie = Trie()
@@ -46,23 +48,21 @@ class GoogleCompleter(Completer):
         else:
             return ['']
 
-    def get_completions(self, document, complete_event):
-        start, end = document.find_boundaries_of_current_word(WORD=True)
+    def complete(self, document, start, end, word):
+        context = self._FROM_REGEX.search(document.text)
 
-        # only autocomplete if we're at the end of the word, as the completion framework doesn't handle overwrites well
-        if end == 0:
-            word = document.text[document.cursor_position + start: document.cursor_position + end]
-            context = self._FROM_REGEX.search(document.text)
+        if context:
+            word_is_context = (
+                document.cursor_position >= context.start()
+                and document.cursor_position <= context.end()
+            )
+            context = context.group(1)
+        else:
+            word_is_context = False
 
-            if context:
-                word_is_context = document.cursor_position >= context.start() and document.cursor_position <= context.end()
-                context = context.group(1)
-            else:
-                word_is_context = False
-
-            if word_is_context:
-                for result in self.resource_trie.autocomplete(word):
-                    yield Completion(result, start_position=start)
-            else:
-                for result in self.lookup(context, word):
-                    yield Completion(result, start_position=start)
+        if word_is_context:
+            for result in self.resource_trie.autocomplete(word):
+                yield Completion(result, start_position=start)
+        else:
+            for result in self.lookup(context, word):
+                yield Completion(result, start_position=start)

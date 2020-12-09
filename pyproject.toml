@@ -5,7 +5,7 @@ build-backend = "poetry.masonry.api"
 [tool.poetry]
 name = "gaql"
 version = "1.1.0"
-description = "A command line interface to the Google Ads Query Language (GAQL). Run with `gaql` or `gaql-tools`"
+description = "A command line interface to the Google Ads Query Language (GAQL). Run with `gaql`"
 
 authors = [
   "Ben Ryves <bryves@gmail.com>"
@@ -19,7 +19,6 @@ keywords = ['gaql', 'google-ads', 'cli']
 
 [tool.poetry.scripts]
 gaql = 'gaql.client.commands:cli'
-gaql-tools = 'gaql.tools.commands:tools'
 
 [tool.poetry.dependencies]
 python = "^3.7"
