@@ -23,7 +23,7 @@ def autocomplete_fields():
 
     resources_path = pathlib.Path('gaql/lib/google_clients/completion/entities.json')
     resource_rows = query_method(resources_query())
-    resources = { resource.name.value: to_dict(resource) for resource in resource_rows }
+    resources = { resource.name: to_dict(resource) for resource in resource_rows }
     if resources_path.exists():
         with resources_path.open('r') as f:
             existing_resources = json.load(f)
@@ -38,7 +38,7 @@ def autocomplete_fields():
         resource_dict["fields"] = []
         attributes = query_method(attributes_query(resource_name))
         for attribute in attributes:
-            resource_dict["fields"].append(attribute.name.value)
+            resource_dict["fields"].append(attribute.name)
 
     with resources_path.open('w') as f:
         json.dump(resources, fp=f)
