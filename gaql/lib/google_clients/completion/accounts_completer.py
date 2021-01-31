@@ -14,7 +14,7 @@ from gaql.lib.google_clients.query_client import QueryClient
 class AccountCompleter:
     def __init__(self):
         root_account = get_root_client()
-        self.query_client = QueryClient(root_account)
+        self.query_client = QueryClient(Account("root", root_account))
         self.accounts_file = CONFIG_DIR / f"accounts_{root_account}.txt"
         self.accounts = []
         self.load_accounts_cache()
@@ -37,16 +37,16 @@ class AccountCompleter:
             return time.time() - os.path.getmtime(self.accounts_file)
 
         if not self.accounts_file.exists() or age_in_seconds() > seconds_in_one_day:
-            accounts = self.get_accounts()
+            found_accounts = self.get_accounts()
             with open(self.accounts_file, 'w') as f:
-                for (name, id) in accounts:
+                for (name, id) in found_accounts:
                     f.write(f"{name},{id}\n")
-        else:
-            accounts = []
-            with open(self.accounts_file, 'r') as f:
-                for line in f.readlines():
-                    name, id = line.split(",")
-                    accounts.append(Account(name=name, account_id=id.strip()))
+
+        accounts = []
+        with open(self.accounts_file, 'r') as f:
+            for line in f.readlines():
+                name, id = line.split(",")
+                accounts.append(Account(name=name, account_id=id.strip()))
 
         self.accounts = accounts
 
