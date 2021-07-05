@@ -5,14 +5,13 @@ from google.ads.googleads.errors import GoogleAdsException
 
 
 def google_ads_query(client, account_id):
-    ga_service = client.get_service("GoogleAdsService")
+    service = setup_ads_service(client) 
 
     def do_query(query):
         search_request = client.get_type("SearchGoogleAdsStreamRequest")
-        if account_id:
-            search_request.customer_id = account_id
+        search_request.customer_id = account_id
         search_request.query = query
-        response = ga_service.search_stream(search_request)
+        response = service.search_stream(search_request)
         for batch in response:
             for row in batch.results:
                 yield row._pb
