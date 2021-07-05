@@ -1,6 +1,6 @@
 import sys
 
-import google.ads.google_ads.client
+import google.ads.googleads.client
 from prompt_toolkit import PromptSession
 from prompt_toolkit.history import FileHistory
 from prompt_toolkit.key_binding import KeyBindings
@@ -61,7 +61,7 @@ def run_as_repl(run_query, state, completion):
                 try:
                     rows = run_query(query)
                     write_rows(rows, state)
-                except google.ads.google_ads.errors.GoogleAdsException as ex:
+                except google.ads.googleads.errors.GoogleAdsException as ex:
                     handle_google_ads_error(ex)
     except (EOFError, KeyboardInterrupt):
         print('\nBye!')
