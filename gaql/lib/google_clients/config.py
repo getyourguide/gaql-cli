@@ -48,7 +48,7 @@ def read_credentials_from_file():
 
 def load_credentials():
     """Loads credentials with the following ordering: from env, Google's yaml file, a custom .json file in .config/gaql"""
-    from google.ads.google_ads import config
+    from google.ads.googleads import config
     try:
         return config.load_from_env()
     except:
@@ -65,14 +65,14 @@ def get_root_client():
 
 
 def setup_client():
-    from google.ads.google_ads.client import GoogleAdsClient
+    from google.ads.googleads.client import GoogleAdsClient
     credentials = load_credentials()
     return GoogleAdsClient.load_from_dict(credentials)
 
 
 def setup_ads_service(client):
-    return client.get_service('GoogleAdsService', version='v6')
+    return client.get_service('GoogleAdsService', version='v8')
 
 
 def setup_fields_service(client):
-    return client.get_service('GoogleAdsFieldService', version='v6')
+    return client.get_service('GoogleAdsFieldService', version='v8')
