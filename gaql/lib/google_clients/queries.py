@@ -23,6 +23,6 @@ def google_fields_query(client):
     service = setup_fields_service(client)
 
     def do_query(query):
-        return service.search_google_ads_fields(query, page_size=int(DEFAULT_LIMIT))
+        return service.search_google_ads_fields(query=query)
 
     return do_query
