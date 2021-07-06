@@ -1,4 +1,4 @@
-"""Script for maintaining entities.json"""
+"""Script for maintaining autocomplete.py"""
 from gaql.lib.click_decorators.state import State
 from gaql.lib.google_clients.config import setup_client
 from gaql.lib.google_clients.queries import google_fields_query
