@@ -1,7 +1,11 @@
 # Changelog
 
+## 1.2.0
+- Update Google Ads from v6 to v8
+- Regenerate the autocomplete for v8 entities
+
 ## 1.1.0
-- Update Google Ads from v6 to v3
+- Update Google Ads from v3 to v6
 - Updated autocomplete to use new fields available in v6
 - Updated minor dependencies
   - click: 7.1.1 -> 7.1.2
