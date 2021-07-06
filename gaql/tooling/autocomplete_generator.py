@@ -1,4 +1,4 @@
-"""Script for maintaining autocompletions.py"""
+"""Script for maintaining entities.json"""
 from gaql.lib.click_decorators.state import State
 from gaql.lib.google_clients.config import setup_client
 from gaql.lib.google_clients.queries import google_fields_query
@@ -23,7 +23,7 @@ def autocomplete_fields():
 
     resources_path = pathlib.Path('gaql/lib/google_clients/completion/entities.json')
     resource_rows = query_method(resources_query())
-    resources = { resource.name: to_dict(resource) for resource in resource_rows }
+    resources = { resource.name: to_dict(resource._pb) for resource in resource_rows }
     if resources_path.exists():
         with resources_path.open('r') as f:
             existing_resources = json.load(f)
