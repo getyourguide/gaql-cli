@@ -1,5 +1,8 @@
 # GAQL CLI
 
+[![PyPI version](https://badge.fury.io/py/gaql.svg)](https://badge.fury.io/py/gaql)
+![PyPI downloads](https://img.shields.io/pypi/dm/gaql)
+
 A CLI for running [GoogleAds queries](https://developers.google.com/google-ads/api/docs/query/overview).
 
 ## Usage
