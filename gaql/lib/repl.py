@@ -41,7 +41,7 @@ def read_query():
     return parse_query(query)
 
 
-def parse_query(query, unlimited = False):
+def parse_query(query, unlimited=False):
     base_query = query.replace(';', '')
     if unlimited or 'limit' in base_query.lower():
         return base_query

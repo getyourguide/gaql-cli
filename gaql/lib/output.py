@@ -45,6 +45,7 @@ def write_csv(stream, rows):
             row = convert_row(row)
             writer.writerow(row)
 
+
 def to_dict(row):
     return MessageToDict(row, preserving_proto_field_name=True)
 

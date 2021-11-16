@@ -5,7 +5,7 @@ from google.ads.googleads.errors import GoogleAdsException
 
 
 def google_ads_query(client, account_id):
-    service = setup_ads_service(client) 
+    service = setup_ads_service(client)
 
     def do_query(query):
         search_request = client.get_type("SearchGoogleAdsStreamRequest")
