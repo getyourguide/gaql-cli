@@ -1,7 +1,4 @@
-from gaql import DEFAULT_LIMIT
 from gaql.lib.google_clients.config import setup_ads_service, setup_fields_service
-from google.ads.googleads.client import GoogleAdsClient
-from google.ads.googleads.errors import GoogleAdsException
 
 
 def google_ads_query(client, account_id):

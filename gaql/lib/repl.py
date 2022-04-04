@@ -1,5 +1,3 @@
-import sys
-
 import google.ads.googleads.client
 from prompt_toolkit import PromptSession
 from prompt_toolkit.history import FileHistory

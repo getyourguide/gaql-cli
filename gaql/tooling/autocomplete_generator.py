@@ -12,7 +12,7 @@ def attributes_query(resource):
 
 
 def resources_query():
-    return f"SELECT name, selectable_with WHERE category = 'RESOURCE'"
+    return "SELECT name, selectable_with WHERE category = 'RESOURCE'"
 
 
 def autocomplete_fields():
