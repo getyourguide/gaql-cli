@@ -7,7 +7,7 @@ def clients_cmd(state):
     client = setup_client()
     query_method = google_ads_query(client, get_root_client())
 
-    query = f"""SELECT
+    query = """SELECT
             customer.id,
             customer_client.descriptive_name,
             customer_client.id

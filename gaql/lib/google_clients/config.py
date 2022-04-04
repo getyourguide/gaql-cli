@@ -46,7 +46,7 @@ def read_credentials_from_file():
 
 
 def load_credentials():
-    """Loads credentials with the following ordering: from env, Google's yaml file, a custom .json file in .config/gaql"""
+    """Loads credentials with ordering: from env, Google's yaml file, a custom .json file in .config/gaql"""
     from google.ads.googleads import config
 
     try:
@@ -56,9 +56,8 @@ def load_credentials():
             return config.load_from_yaml_file()
         except:
             if not CREDENTIAL_FILE.exists():
-                print(
-                    f"Couldn't load credentials from the environment, or from ~/google-ads.yaml. Trying {CREDENTIAL_FILE}"
-                )
+                message = f"Couldn't load credentials from environment or ~/google-ads.yaml. Trying {CREDENTIAL_FILE}"
+                print(message)
             file_credentials = read_credentials_from_file()
             file_credentials.update({"use_proto_plus": True})
             return config.load_from_dict(file_credentials)

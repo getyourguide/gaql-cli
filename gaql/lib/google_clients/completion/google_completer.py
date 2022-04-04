@@ -12,7 +12,7 @@ class GoogleCompleter(Completer):
     """
 
     _ALL = 'all'
-    _FROM_REGEX = re.compile('FROM (\w+)')
+    _FROM_REGEX = re.compile(r"FROM (\w+)")
 
     def __init__(self):
         self.autocompletion = COMPLETIONS
@@ -53,7 +53,7 @@ class GoogleCompleter(Completer):
 
         # only autocomplete if we're at the end of the word, as the completion framework doesn't handle overwrites well
         if end == 0:
-            word = document.text[document.cursor_position + start : document.cursor_position + end]
+            word = document.text[document.cursor_position + start:document.cursor_position + end]
             context = self._FROM_REGEX.search(document.text)
 
             if context:
