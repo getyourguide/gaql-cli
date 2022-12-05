@@ -84,19 +84,19 @@ pyflakes = ">=2.5.0,<2.6.0"
 
 [[package]]
 name = "google-ads"
-version = "18.1.0"
+version = "19.0.0"
 description = "Client library for the Google Ads API"
 category = "main"
 optional = false
 python-versions = ">=3.7"
 
 [package.dependencies]
-google-api-core = ">=2.8.1,<3.0.0"
+google-api-core = "2.10.1"
 google-auth-oauthlib = ">=0.3.0,<1.0.0"
 googleapis-common-protos = ">=1.56.4,<2.0.0"
 grpcio = ">=1.38.1,<2.0.0"
 grpcio-status = ">=1.38.1,<2.0.0"
-proto-plus = "1.22.0"
+proto-plus = "1.22.1"
 protobuf = ">=4.21.5"
 PyYAML = ">=5.1,<7.0"
 setuptools = ">=40.3.0"
@@ -106,7 +106,7 @@ tests = ["nox (>=2020.12.31,<2022.6)"]
 
 [[package]]
 name = "google-api-core"
-version = "2.10.2"
+version = "2.10.1"
 description = "Google API client core library"
 category = "main"
 optional = false
@@ -115,7 +115,7 @@ python-versions = ">=3.7"
 [package.dependencies]
 google-auth = ">=1.25.0,<3.0dev"
 googleapis-common-protos = ">=1.56.2,<2.0dev"
-protobuf = ">=3.19.5,<3.20.0 || >3.20.0,<3.20.1 || >3.20.1,<4.21.0 || >4.21.0,<4.21.1 || >4.21.1,<4.21.2 || >4.21.2,<4.21.3 || >4.21.3,<4.21.4 || >4.21.4,<4.21.5 || >4.21.5,<5.0.0dev"
+protobuf = ">=3.20.1,<5.0.0dev"
 requests = ">=2.18.0,<3.0.0dev"
 
 [package.extras]
@@ -285,7 +285,7 @@ wcwidth = "*"
 
 [[package]]
 name = "proto-plus"
-version = "1.22.0"
+version = "1.22.1"
 description = "Beautiful, Pythonic protocol buffers."
 category = "main"
 optional = false
@@ -492,7 +492,7 @@ testing = ["flake8 (<5)", "func-timeout", "jaraco.functools", "jaraco.itertools"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.7"
-content-hash = "cb4f7f80f499ac84af5c794c8a12832dd51fee0511c859ffc6cbaf7fb3e744ca"
+content-hash = "b30770b12266bb0ef60b6461d7784a95f65bf2c3d5e8cb5c976d486ad8bee554"
 
 [metadata.files]
 black = [
@@ -543,12 +543,12 @@ flake8 = [
     {file = "flake8-5.0.4.tar.gz", hash = "sha256:6fbe320aad8d6b95cec8b8e47bc933004678dc63095be98528b7bdd2a9f510db"},
 ]
 google-ads = [
-    {file = "google-ads-18.1.0.tar.gz", hash = "sha256:47b6525a6cc571ac2a5f021a211f27501a9c16709a7e34217f83aff10b3f9f24"},
-    {file = "google_ads-18.1.0-py3-none-any.whl", hash = "sha256:4e5de48e9b3ab6575aa8c7feb3329530c909a38049c86ca761271cd156232dda"},
+    {file = "google-ads-19.0.0.tar.gz", hash = "sha256:7a58d9f0a6c42acdc8a1388f6e74fd4ecd1b51da758d8a4210bfe3e8a32421fa"},
+    {file = "google_ads-19.0.0-py3-none-any.whl", hash = "sha256:cf4ff08714d5466d1cb407448faf8ed63067b613d138b2294a31db798fd9a071"},
 ]
 google-api-core = [
-    {file = "google-api-core-2.10.2.tar.gz", hash = "sha256:10c06f7739fe57781f87523375e8e1a3a4674bf6392cd6131a3222182b971320"},
-    {file = "google_api_core-2.10.2-py3-none-any.whl", hash = "sha256:34f24bd1d5f72a8c4519773d99ca6bf080a6c4e041b4e9f024fe230191dda62e"},
+    {file = "google-api-core-2.10.1.tar.gz", hash = "sha256:e16c15a11789bc5a3457afb2818a3540a03f341e6e710d7f9bbf6cde2ef4a7c8"},
+    {file = "google_api_core-2.10.1-py3-none-any.whl", hash = "sha256:92d17123cfe399b5ef7e026c63babf978d8475e1ac877919eb7933e25dea2273"},
 ]
 google-auth = [
     {file = "google-auth-2.13.0.tar.gz", hash = "sha256:9352dd6394093169157e6971526bab9a2799244d68a94a4a609f0dd751ef6f5e"},
@@ -646,8 +646,8 @@ prompt-toolkit = [
     {file = "prompt_toolkit-3.0.33.tar.gz", hash = "sha256:535c29c31216c77302877d5120aef6c94ff573748a5b5ca5b1b1f76f5e700c73"},
 ]
 proto-plus = [
-    {file = "proto-plus-1.22.0.tar.gz", hash = "sha256:c2e6693fdf68c405a6428226915a8625d21d0513793598ae3287a1210478d8ec"},
-    {file = "proto_plus-1.22.0-py3-none-any.whl", hash = "sha256:a27192d8cdc54e044f137b4c9053c9108cf5c065b46d067f1bcd389a911faf5b"},
+    {file = "proto-plus-1.22.1.tar.gz", hash = "sha256:6c7dfd122dfef8019ff654746be4f5b1d9c80bba787fe9611b508dd88be3a2fa"},
+    {file = "proto_plus-1.22.1-py3-none-any.whl", hash = "sha256:ea8982669a23c379f74495bc48e3dcb47c822c484ce8ee1d1d7beb339d4e34c5"},
 ]
 protobuf = [
     {file = "protobuf-4.21.8-cp310-abi3-win32.whl", hash = "sha256:c252c55ee15175aa1b21b7b9896e6add5162d066d5202e75c39f96136f08cce3"},
