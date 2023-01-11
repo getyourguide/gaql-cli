@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.8.0
+- Update Google Ads API from v10 to v12
+- Regenerate the autocomplete for v12 entities
+
 ## 1.3.0
 - Update Google Ads from v8 to v9
 - Regenerate the autocomplete for v9 entities
