@@ -25,7 +25,7 @@ gaql-tools = 'gaql.tools.commands:tools'
 python = "^3.7"
 toml = "^0.10.1"
 
-google-ads={ version = "19.0.0" }
+google-ads={ version = "21.0.0" }
 click={ version = "^8.0.3" }
 prompt_toolkit={ version = "^3.0.22" }
 pygments={ version = "^2.10.0" }
