@@ -31,5 +31,5 @@ prompt_toolkit={ version = "^3.0.22" }
 pygments={ version = "^2.10.0" }
 
 [tool.poetry.dev-dependencies]
-black = "^22.10"
+black = "^23.3"
 flake8 = "^5.0.4"
