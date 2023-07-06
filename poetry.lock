@@ -126,23 +126,23 @@ pyflakes = ">=2.5.0,<2.6.0"
 
 [[package]]
 name = "google-ads"
-version = "19.0.0"
+version = "21.2.0"
 description = "Client library for the Google Ads API"
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "google-ads-19.0.0.tar.gz", hash = "sha256:7a58d9f0a6c42acdc8a1388f6e74fd4ecd1b51da758d8a4210bfe3e8a32421fa"},
-    {file = "google_ads-19.0.0-py3-none-any.whl", hash = "sha256:cf4ff08714d5466d1cb407448faf8ed63067b613d138b2294a31db798fd9a071"},
+    {file = "google-ads-21.2.0.tar.gz", hash = "sha256:d155a82d69700ae7c509aa62c789f34f260ac7f12db488a95a3a297e45d868b9"},
+    {file = "google_ads-21.2.0-py3-none-any.whl", hash = "sha256:ce2adac2ca10dc25bde38402fc2423101fed01ef4ca33b016a2d67502ae90fb8"},
 ]
 
 [package.dependencies]
-google-api-core = "2.10.1"
-google-auth-oauthlib = ">=0.3.0,<1.0.0"
-googleapis-common-protos = ">=1.56.4,<2.0.0"
+google-api-core = ">=2.8.0,<=2.11.0"
+google-auth-oauthlib = ">=0.3.0,<2.0.0"
+googleapis-common-protos = ">=1.56.0,<2.0.0"
 grpcio = ">=1.38.1,<2.0.0"
 grpcio-status = ">=1.38.1,<2.0.0"
-proto-plus = "1.22.1"
-protobuf = ">=4.21.5"
+proto-plus = ">=1.19.6,<1.23"
+protobuf = ">=3.12.0,<3.18.dev0 || >=3.20.dev0,<5.0.0dev"
 PyYAML = ">=5.1,<7.0"
 setuptools = ">=40.3.0"
 
@@ -751,4 +751,4 @@ testing = ["flake8 (<5)", "func-timeout", "jaraco.functools", "jaraco.itertools"
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.7"
-content-hash = "b30770b12266bb0ef60b6461d7784a95f65bf2c3d5e8cb5c976d486ad8bee554"
+content-hash = "7c7dc423a59250d4ff1b88ccd7a1392fb1e4cf3a9561a053fbedf146860916a8"
