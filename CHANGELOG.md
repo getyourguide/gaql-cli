@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.9.1
+- Update certifi from 2022.12.7 to 2023.7.22
+
 ## 1.9.0
 - Update Google Ads API from v12 to v14
 - Regenerate the autocomplete for v14 entities
