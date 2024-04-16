@@ -210,25 +210,24 @@ pyflakes = ">=2.5.0,<2.6.0"
 
 [[package]]
 name = "google-ads"
-version = "22.1.0"
+version = "23.1.0"
 description = "Client library for the Google Ads API"
 optional = false
-python-versions = ">=3.7, <3.12"
+python-versions = ">=3.8, <3.13"
 files = [
-    {file = "google-ads-22.1.0.tar.gz", hash = "sha256:cfab38b40eb8424a4a514823bd8b911a57ef55dd64e2112cfa46a70d8090de98"},
-    {file = "google_ads-22.1.0-py3-none-any.whl", hash = "sha256:6fdd3fb635678fbb3c8f87271afc81f0e139882b83b48505160fc4daacf33ad0"},
+    {file = "google-ads-23.1.0.tar.gz", hash = "sha256:15c7a5953f70c52054020bc70426b2963ebf5ab1486912d802de17d7af40989b"},
+    {file = "google_ads-23.1.0-py3-none-any.whl", hash = "sha256:1fe47d3c2a0b6f76719738adf62b5ffde570d153e853f66f5a191599b564b673"},
 ]
 
 [package.dependencies]
-google-api-core = ">=2.8.0,<=3.0.0"
+google-api-core = ">=2.13.0,<=3.0.0"
 google-auth-oauthlib = ">=0.3.0,<2.0.0"
-googleapis-common-protos = ">=1.56.0,<2.0.0"
-grpcio = ">=1.38.1,<2.0.0"
-grpcio-status = ">=1.38.1,<2.0.0"
-proto-plus = ">=1.19.6,<2.0.0"
-protobuf = ">=3.12.0,<3.18.dev0 || >=3.20.dev0,<5.0.0"
+googleapis-common-protos = ">=1.56.3,<2.0.0"
+grpcio = ">=1.59.0,<2.0.0"
+grpcio-status = ">=1.59.0,<2.0.0"
+proto-plus = ">=1.22.3,<2.0.0"
+protobuf = ">=4.25.0,<5.0.0"
 PyYAML = ">=5.1,<7.0"
-setuptools = ">=40.3.0"
 
 [package.extras]
 tests = ["nox (>=2020.12.31,<2022.6)"]
@@ -708,22 +707,6 @@ files = [
 pyasn1 = ">=0.1.3"
 
 [[package]]
-name = "setuptools"
-version = "69.2.0"
-description = "Easily download, build, install, upgrade, and uninstall Python packages"
-optional = false
-python-versions = ">=3.8"
-files = [
-    {file = "setuptools-69.2.0-py3-none-any.whl", hash = "sha256:c21c49fb1042386df081cb5d86759792ab89efca84cf114889191cd09aacc80c"},
-    {file = "setuptools-69.2.0.tar.gz", hash = "sha256:0ff4183f8f42cd8fa3acea16c45205521a4ef28f73c6391d8a25e92893134f2e"},
-]
-
-[package.extras]
-docs = ["furo", "jaraco.packaging (>=9.3)", "jaraco.tidelift (>=1.4)", "pygments-github-lexers (==0.0.5)", "rst.linker (>=1.9)", "sphinx (<7.2.5)", "sphinx (>=3.5)", "sphinx-favicon", "sphinx-inline-tabs", "sphinx-lint", "sphinx-notfound-page (>=1,<2)", "sphinx-reredirects", "sphinxcontrib-towncrier"]
-testing = ["build[virtualenv]", "filelock (>=3.4.0)", "importlib-metadata", "ini2toml[lite] (>=0.9)", "jaraco.develop (>=7.21)", "jaraco.envs (>=2.2)", "jaraco.path (>=3.2.0)", "mypy (==1.9)", "packaging (>=23.2)", "pip (>=19.1)", "pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-cov", "pytest-enabler (>=2.2)", "pytest-home (>=0.5)", "pytest-mypy (>=0.9.1)", "pytest-perf", "pytest-ruff (>=0.2.1)", "pytest-timeout", "pytest-xdist (>=3)", "tomli", "tomli-w (>=1.0.0)", "virtualenv (>=13.0.0)", "wheel"]
-testing-integration = ["build[virtualenv] (>=1.0.3)", "filelock (>=3.4.0)", "jaraco.envs (>=2.2)", "jaraco.path (>=3.2.0)", "packaging (>=23.2)", "pytest", "pytest-enabler", "pytest-xdist", "tomli", "virtualenv (>=13.0.0)", "wheel"]
-
-[[package]]
 name = "toml"
 version = "0.10.2"
 description = "Python Library for Tom's Obvious, Minimal Language"
@@ -787,4 +770,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.8,<3.12"
-content-hash = "edcecb9870816a8d0061924e8ad5f26ef91f852cab05d24d3595e440161cb29f"
+content-hash = "e90b6287ec3939d08cf62479ec6ec9b91f3f9fdc4f044032143d8fd820a6ff21"
