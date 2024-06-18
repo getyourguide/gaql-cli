@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.11.0
+- Update Google Ads API from v15 to v17
+- Regenerate the autocomplete for v17 entities
+
 ## 1.10.0
 - Update Google Ads API from v14 to v15
 - Regenerate the autocomplete for v15 entities
