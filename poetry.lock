@@ -210,13 +210,13 @@ pyflakes = ">=2.5.0,<2.6.0"
 
 [[package]]
 name = "google-ads"
-version = "23.1.0"
+version = "24.1.0"
 description = "Client library for the Google Ads API"
 optional = false
-python-versions = ">=3.8, <3.13"
+python-versions = "<3.13,>=3.8"
 files = [
-    {file = "google-ads-23.1.0.tar.gz", hash = "sha256:15c7a5953f70c52054020bc70426b2963ebf5ab1486912d802de17d7af40989b"},
-    {file = "google_ads-23.1.0-py3-none-any.whl", hash = "sha256:1fe47d3c2a0b6f76719738adf62b5ffde570d153e853f66f5a191599b564b673"},
+    {file = "google_ads-24.1.0-py3-none-any.whl", hash = "sha256:b77f0169e1e3f075f2482ee9b4a8b6a5acb8565ec4c35b8550a752d0cd557bc9"},
+    {file = "google_ads-24.1.0.tar.gz", hash = "sha256:617ef1ab55f942238348435c6caf11aababac100fdc11fb883ea1ee63ffe6b9d"},
 ]
 
 [package.dependencies]
@@ -769,4 +769,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.8,<3.12"
-content-hash = "2910c6c543c47c51ae81b10f78a2e18299baf58f982e779e1be6478117480c34"
+content-hash = "28d5e09890350df231492b0a61327da1a24af3d30c85700f2b80cb2c0f478563"
