@@ -33,4 +33,4 @@ certifi = "2025.1.31"
 
 [tool.poetry.dev-dependencies]
 black = "^25.1"
-flake8 = "^5.0.4"
+flake8 = "^7.1.2"
