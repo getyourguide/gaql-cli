@@ -1,5 +1,5 @@
 [build-system]
-requires = ["poetry>=1.6"]
+requires = ["poetry>=2.0.0"]
 build-backend = "poetry.masonry.api"
 
 [tool.poetry]
@@ -31,6 +31,6 @@ prompt_toolkit={ version = "^3.0.22" }
 pygments={ version = "^2.10.0" }
 certifi = "2025.1.31"
 
-[tool.poetry.dev-dependencies]
+[tool.poetry.group.dev.dependencies]
 black = "^25.1"
 flake8 = "^7.1.2"
