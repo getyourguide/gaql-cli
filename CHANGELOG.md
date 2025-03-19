@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.12.1
+- Update Google Ads Python library to 26.0.1
+
 ## 1.12.0
 - Update Google Ads API from v17 to v19
 - Regenerate the autocomplete for v19 entities
