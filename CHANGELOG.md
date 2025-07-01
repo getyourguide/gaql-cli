@@ -1,4 +1,6 @@
 # Changelog
+## 1.13.0
+- Update Google Ads API from v19 to v20
 
 ## 1.12.1
 - Update Google Ads Python library to 26.0.1
