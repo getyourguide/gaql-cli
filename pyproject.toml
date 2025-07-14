@@ -29,7 +29,7 @@ google-ads={ version = "27.0.0" }
 click={ version = "^8.0.3" }
 prompt_toolkit={ version = "^3.0.22" }
 pygments={ version = "^2.10.0" }
-certifi = "2025.6.15"
+certifi = "2025.7.14"
 
 [tool.poetry.group.dev.dependencies]
 black = "^25.1"
