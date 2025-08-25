@@ -1,4 +1,7 @@
 # Changelog
+## 1.14.0
+- Update Google Ads API from v20 to v21
+
 ## 1.13.0
 - Update Google Ads API from v19 to v20
 
