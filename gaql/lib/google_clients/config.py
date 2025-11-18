@@ -74,8 +74,8 @@ def setup_client():
 
 
 def setup_ads_service(client):
-    return client.get_service("GoogleAdsService", version="v21")
+    return client.get_service("GoogleAdsService", version="v22")
 
 
 def setup_fields_service(client):
-    return client.get_service("GoogleAdsFieldService", version="v21")
+    return client.get_service("GoogleAdsFieldService", version="v22")
