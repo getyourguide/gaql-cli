@@ -1,4 +1,5 @@
 """Output GoogleAdsRows in different formats"""
+
 import collections
 import inspect
 from json import dump
