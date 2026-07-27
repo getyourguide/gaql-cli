@@ -226,14 +226,14 @@ pyflakes = ">=3.4.0,<3.5.0"
 
 [[package]]
 name = "google-ads"
-version = "29.2.0"
+version = "31.2.0"
 description = "Client library for the Google Ads API"
 optional = false
 python-versions = "<3.15,>=3.9"
 groups = ["main"]
 files = [
-    {file = "google_ads-29.2.0-py3-none-any.whl", hash = "sha256:264d98b5a08158702d91248be633e104436da522b2a513fc90f983e39553380d"},
-    {file = "google_ads-29.2.0.tar.gz", hash = "sha256:d2331f2a79447792f80ce2a17f46eebc4003d3e4228b2e580e20af313dce8ed0"},
+    {file = "google_ads-31.2.0-py3-none-any.whl", hash = "sha256:80e3c57e54c561f6b24c02988e7fa981b50b00a0a1d85e4596702d3398cf1cff"},
+    {file = "google_ads-31.2.0.tar.gz", hash = "sha256:7099181c1a7f627739b5c69cf86472bab462fccb743ec7659e252fb87fa1a7da"},
 ]
 
 [package.dependencies]
@@ -261,8 +261,8 @@ proto-plus = [
     {version = ">=1.25.0,<2.0.0", markers = "python_version >= \"3.13\""},
 ]
 protobuf = [
-    {version = ">=4.25.0,<7.0.0"},
-    {version = ">=5.26.1,<7.0.0", markers = "python_version >= \"3.13\""},
+    {version = ">=4.25.0,<8.0.0", markers = "python_version >= \"3.10\""},
+    {version = ">=5.26.1,<8.0.0", markers = "python_version >= \"3.13\""},
 ]
 PyYAML = ">=5.1,<7.0"
 
@@ -951,4 +951,4 @@ files = [
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.10, <3.15"
-content-hash = "86e584f33d505dd5d40761d1e9d27cad0d028df5eebc99b59d2e975a086082dd"
+content-hash = "4055adcf5d62b2dc34f245508cc952607f986030c89e1a770b7843cef612f2f7"
